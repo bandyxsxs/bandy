@@ -1,0 +1,13 @@
+   import Note from './Note.svelte'
+    import NewNote from "./NewNote.svelte";
+
+    import { modalOpen, noteArray } from "./stores";
+
+    function showAddModal() {
+        $modalOpen = true
+    }
+
+    var addingNote
+    modalOpen.subscribe(value => {
+        addingNote = value
+    })
